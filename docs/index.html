@@ -11,32 +11,5 @@
 <body>
   <app-root></app-root>
 <script src="runtime.a0f096af7d0f03d9.js" type="module"></script><script src="polyfills.391fd531689e865c.js" type="module"></script><script src="scripts.9fc6c9a4c915a6d8.js" defer></script><script src="https://pratikshaghodke.github.io/AdhiShaktiAdhiMaya/main.76110aa5d3d77117.js" type="module"></script>
-<script>
-    readOTP() {
-    if ('OTPCredential' in window) {
-      alert("availablr");
-      
-      window.addEventListener('DOMContentLoaded', (e) => {
-        const ac: any = new AbortController();
-        navigator.credentials
-          .get({
-            otp: { transport: ['sms'] },
-            signal: ac.signal,
-          })
-          .then((otp: any) => {
-            alert(JSON.stringify(otp));
-            
-            alert(otp.code);
-          })
-          .catch((err) => {
-            alert(JSON.stringify(err));
-          });
-      });
-    } else {
-      alert('WebOTP not supported!.');
-    }
-  }
-  this.readOTP();
-</script>
 </body>
 </html>
